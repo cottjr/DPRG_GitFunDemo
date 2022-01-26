@@ -1,0 +1,183 @@
+Quick Git Demo on 25 Jan 2022.txt
+
+per multiple requests in RBNV 18 Jan 2022
+
+1. create & initialize a repo on local
+	-> GitFun
+
+2. create a new file
+	main.txt
+	
+	Hello World - this is the first line in our new file
+	
+3. make a commit
+	step 1- first commit in our new sample repo.
+
+3a. view GitHistory in VS Code
+	
+4. Add text to main.txt
+	And here we go - off to the races with our first adddddditions to this file.
+	
+5. make a commit
+	simple addition to the file
+
+5a. view GitHistory in VS Code
+
+	
+6. create a new / blank repo in GitHub
+	DPRG_GitFunDemo
+		
+	copy the GitHub URL 
+	
+	share the GitHub URL via chat
+	
+7. add the remote as origin in the local
+
+8. push and pull via VS Code
+
+9. view GitHistory in VS Code
+	
+10. view the status in GitHub
+
+
+13. make a new branch on local 
+	"pretendNewFeatureBranch"
+	=-> correct the spelling error "adddddditions" to "additions
+
+	Add a new file "foobar.txt"
+	Here we have a second txt file in the repo. 
+	We'll just give it some random text to dabble with.
+	
+	Copy the file with these notes into the repo "Quick Git Demo on 25 Jan 2022.txt"
+
+14. make a commit on local
+	1) Corrected minor spelling error.
+	2) added "foobar.txt" and "Quick Git Demo on 25 Jan 2022.txt"
+
+
+15. Add README.md file via GitHub 
+	ie. this is to the main / master / original branch
+
+	This Repo is just a sandbox to demonstrate Git and play with for Dallas Personal Robotics Group experimentation.
+
+
+16. push and pull via VS Code
+
+	view GitHistory in VS Code
+	
+	view the status in GitHub
+	
+17. observe that have still checked-out "pretendNewFeatureBranch" on local
+
+	-> observe that ReadME.txt does not exist
+	
+18.	checkout "main" on local
+
+	-> observe that "foobar.txt" does not exist
+	
+18a. Toggle between Branches in VS Code
+		observe the file system at the same time
+		note how Git automatically updates the file system to match the selected branch & commit
+		note that this can also get very confused if you play with Repos in e.g. Google Drive or OneDrive
+			-> because cloud file sync engines can fight with Git...
+		hence I recommend using a short path near root / outside of a Cloud sync'd folder
+	
+19. So how do we patch these together?
+
+20.	Create a pull request on GitHub "pretendNewFeatureBranch" into "main"
+
+	observe how you can review the proposed changes before actually muddling with code
+	=> hence this gives a good chance to verify whether you really want to merge
+	
+	note that we could have also gone the other way, and Create a pull request from "main" into "pretendNewFeatureBranch" 
+	
+	
+21. push and pull via VS Code
+
+	note that nothing has changed / the pull request is just a 'what-if-proposal' - 
+	Repo history has not been changed
+	
+	view GitHistory in VS Code
+	
+	view the status in GitHub
+	
+22. Accept the pull request in GitHub
+	
+	view the status in GitHub	
+
+23. push and pull via VS Code
+
+	view GitHistory in VS Code
+	
+24. Checkout "main" on local
+	
+	observe that it has everything
+
+25. Delete "foobar.txt" from local
+
+	view the list of files in VS Code
+		-> observe that it's not there
+		
+	view the list of changes in VS Code
+		-> observe that the file deletion is shown
+		-> click on the change to view from commit to working file structure
+		
+26. Undo the "change"
+
+	view the list of files in VS Code
+		-> observe that the file is back in place again
+		
+	view the list of changes in VS Code
+		-> observe that there are no changes
+
+	Hence 
+		-> observe that you can quickly get your bearings in this way 
+			to keep track of what on earth you've done since the last commit
+	
+27.	Checkout "pretendNewFeatureBranch" on local
+
+	observe that it's missing "ReadME.txt"
+	
+28.	ask - what do we do now?
+
+
+
+
+
+29. Explain best practice to maintain sanity
+	-> ie. if you want to continue work on a feature branch
+		=> always pull from "main" into the feature branch
+			BEFORE you start new work on the feature branch
+	
+	-> e.g.
+		- you could do a pull request in GitHub just like we showed earlier
+			I recommend that as you're getting started - until you're comfortable
+			
+		- or you could manually pull from the command line in local
+			can accomplish the same thing, but without the "in-work visibility" that you get by using the "pull request" feature in GitHub
+
+29a. Git Pull to get all branch pointers at the same commit
+		vs. VS Code
+
+
+30. show the LFS repo on local
+	
+	git remote -v 
+		observe local repo is linked with 3 separate remotes
+	
+	Git History
+		observe the various threads
+		observe that my local is way ahead of anything in GitHub (e.g. it's ahead of OriginPrivate)
+		observe 11/14/2020 shows how far Origin is behind OriginPrivate
+		Observe that 10/10/2020 is the last time I pulled updates from Ron Grant into my 'fork' of his repo
+		
+30. note that there are many services like GitHub
+		Atlassian BitBucket
+		AWS Code Commit
+		etc...
+
+=> KDD  (knowledge driven design)
+=> SDD  (skills driven design)
+=> PTTDD	(pass the time driven design)
+
+
